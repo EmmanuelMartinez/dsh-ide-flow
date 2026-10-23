@@ -1,0 +1,42 @@
+# IDE Flow: one bundle that wires the five pieces it depends on.
+#
+# Git panel, Editor, and Session trash are new rows. The frame's right icon rail
+# needs the two in-box rows replaced (ui-layout draws it, ui-sidebar-right
+# answers its presses), so those are disabled and the replacements inserted.
+#
+# The dependent packages' own patches do not run (only bundle patches listed by
+# the profile do), so every row they would have added lives here.
+- insert:
+    - id: git-panel
+      name: '@deepseek-ai/dsh-git-panel'
+- id: git-controller
+  disabled: true
+- id: ui-git
+  disabled: true
+
+- insert:
+    - id: editor-panel
+      name: '@deepseek-ai/dsh-editor-panel'
+- id: workspace-editor
+  disabled: true
+- id: ui-editor
+  disabled: true
+
+- insert:
+    - id: session-manager
+      name: '@deepseek-ai/dsh-session-manager'
+      config:
+        retentionDays: 30
+        sweepMinutes: 60
+
+- insert:
+    - id: layout-rail
+      name: '@deepseek-ai/dsh-layout-rail'
+- id: ui-layout
+  disabled: true
+
+- insert:
+    - id: sidebar-right-rail
+      name: '@deepseek-ai/dsh-sidebar-right-rail'
+- id: ui-sidebar-right
+  disabled: true

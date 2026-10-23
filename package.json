@@ -1,0 +1,26 @@
+{
+  "name": "@deepseek-ai/dsh-ide-flow",
+  "version": "1.0.0",
+  "description": "IDE Flow for DeepSeek Harness Desktop: Git panel, Editor, Session trash, and the right icon rail, installed as one bundle.",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": { "default": "./lib/index.js" },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" }
+  },
+  "files": ["lib/index.js", "cordis.patch.yml", "README.md"],
+  "dependencies": {
+    "@deepseek-ai/dsh-git-panel": "github:EmmanuelMartinez/dsh-git-panel#v1.0.1",
+    "@deepseek-ai/dsh-editor-panel": "github:EmmanuelMartinez/dsh-editor-panel#v1.0.0",
+    "@deepseek-ai/dsh-session-manager": "github:EmmanuelMartinez/dsh-session-manager#v1.7.0",
+    "@deepseek-ai/dsh-layout-rail": "github:EmmanuelMartinez/dsh-layout-rail#v1.0.1",
+    "@deepseek-ai/dsh-sidebar-right-rail": "github:EmmanuelMartinez/dsh-sidebar-right-rail#v1.0.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*"
+  }
+}
