@@ -1,24 +1,32 @@
 {
   "name": "@deepseek-ai/dsh-ide-flow",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "IDE Flow for DeepSeek Harness Desktop: Git panel, Editor, Session trash, and the right icon rail, installed as one bundle.",
   "license": "MIT",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
-    ".": { "default": "./lib/index.js" },
+    ".": {
+      "default": "./lib/index.js"
+    },
     "./package.json": "./package.json"
   },
   "dsh": {
-    "bundle": { "patch": "./cordis.patch.yml" }
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
   },
-  "files": ["lib/index.js", "cordis.patch.yml", "README.md"],
+  "files": [
+    "lib/index.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
   "dependencies": {
-    "@deepseek-ai/dsh-git-panel": "github:EmmanuelMartinez/dsh-git-panel#v1.0.1",
-    "@deepseek-ai/dsh-editor-panel": "github:EmmanuelMartinez/dsh-editor-panel#v1.0.0",
-    "@deepseek-ai/dsh-session-manager": "github:EmmanuelMartinez/dsh-session-manager#v1.7.0",
-    "@deepseek-ai/dsh-layout-rail": "github:EmmanuelMartinez/dsh-layout-rail#v1.0.1",
-    "@deepseek-ai/dsh-sidebar-right-rail": "github:EmmanuelMartinez/dsh-sidebar-right-rail#v1.0.0"
+    "@deepseek-ai/dsh-git-panel": "https://github.com/EmmanuelMartinez/dsh-git-panel/archive/refs/tags/v1.0.1.tar.gz",
+    "@deepseek-ai/dsh-editor-panel": "https://github.com/EmmanuelMartinez/dsh-editor-panel/archive/refs/tags/v1.0.0.tar.gz",
+    "@deepseek-ai/dsh-session-manager": "https://github.com/EmmanuelMartinez/dsh-session-manager/archive/refs/tags/v1.7.0.tar.gz",
+    "@deepseek-ai/dsh-layout-rail": "https://github.com/EmmanuelMartinez/dsh-layout-rail/archive/refs/tags/v1.0.1.tar.gz",
+    "@deepseek-ai/dsh-sidebar-right-rail": "https://github.com/EmmanuelMartinez/dsh-sidebar-right-rail/archive/refs/tags/v1.0.0.tar.gz"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "*"
